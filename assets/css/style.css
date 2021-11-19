@@ -9,3 +9,25 @@
     font-weight: bold;
     align-items: center;
 }
+/* Création de la ligne de séparation titre catégorie */
+.hline-bottom {
+    padding-bottom: 30px;
+    border-bottom: 2px solid #F59732; /* whichever color you prefer */
+}
+/*Couleur du texte du titre catégorie*/
+.catTitle-color{
+    color: #007CA8;
+}
+/*Création du style prix des cars */
+.price-style {
+    background-color:#F59732;
+    border: 2px solid #007CA8;
+    color: white;
+    border-radius: 30px;
+}
+/*Modification style du stitre des cards et insertion ligne de séparation*/
+.card-title{
+    font-size: 20px;
+    border-top: 1px solid;
+    padding-top: 20px;
+}
