@@ -1,0 +1,11 @@
+.catImg{
+    background-image: url(/assets/img/CatImg.jpeg);
+    background-position: center;
+    background-size: 75%;
+    margin-left: 10%;
+    margin-right: 10%;
+    align-items: center;
+    height: 400PX;
+    font-weight: bold;
+    align-items: center;
+}
