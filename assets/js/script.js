@@ -52,36 +52,62 @@ const searchMovie = () => {
                 let innerCardRow = document.createElement("div")
                 innerCardRow.className = "row mt-3 justify-content-center pb-3"
                 //Création du bouton moins
-                let minusButton = document.createElement("a")
-                minusButton.setAttribute("href", "#")
-                minusButton.setAttribute("onclick", "numberOfProducts()")
+                const minusButton = document.createElement("a")
                 minusButton.className = "col-2 btn btn-danger"
                 minusButton.innerText = "-"
                 minusButton.id = "minus" + article.id
                 innerCardRow.appendChild(minusButton)
+                //Fonction diminution quantité au clic
+                minusButton.addEventListener("click", removeProduct = () => {
+                    if(productsInput.value > 0){
+                    productsInput.value-- 
+                }else {
+                    productsInput.value == 0
+                }
+            })
                 //Création de l'input du nombre de produits
-                let productsInput = document.createElement("input")
+                var productsInput = document.createElement("input")
                 productsInput.setAttribute("type", "text")
                 productsInput.className = "col-4"
                 productsInput.value = 0
+                productsInput.id = "input" + article.id
                 innerCardRow.appendChild(productsInput)
                 //Création du bouton plus
-                let plusButton = document.createElement("a")
-                plusButton.setAttribute("href", "#")
+                const plusButton = document.createElement("a")
                 plusButton.className = "col-2 btn btn-success"
                 plusButton.innerText = "+"
-                innerCardRow.appendChild(plusButton)
                 plusButton.id = "plus" + article.id
+                innerCardRow.appendChild(plusButton)
+                //Fonction ajout quantité au clic
+                plusButton.addEventListener("click", addProduct = () => {
+                    productsInput.value++
+                })
                 //Création du bouton valider
-                let confirmButton = document.createElement("a")
-                confirmButton.setAttribute("href", "#")
-                confirmButton.setAttribute("onclick", "")
+                const confirmButton = document.createElement("a")
                 confirmButton.className = "col-8 btn btn-primary mt-3"
                 confirmButton.innerText = "Valider"
-                innerCardRow.appendChild(confirmButton)
                 confirmButton.id = "confirm" + article.id
+                innerCardRow.appendChild(confirmButton)
+                confirmButton.addEventListener("click", cartProduct = () => {
+                    //Div première col
+                    let productModalDiv1 = document.createElement("div")
+                    productModalDiv1.className = "col-3"
+                    rowCart.appendChild(productModalDiv1)
+                    let productImage = document.createElement("img")
+                    productImage.src = article.image
+                    productImage.className = "col-3"
+                    productModalDiv1.appendChild(productImage)
+                    let productModalDiv2 = document.createElement("div")
+                    productModalDiv2.callName = "col-3"
+                    rowCart.appendChild(productModalDiv2)
+                    let pProductTitle = document.createElement("p")
+                    pProductTitle.innerText = article.product_name
+                    productModalDiv2.appendChild(pProductTitle)
+                    //let clonedProduct = coldiv.cloneNode(true)
+                    //rowCart.append(clonedProduct)
+                })
                 //Accrochage des divs
-                carddiv.append(cardtitle, cardptitle, )
+                carddiv.append(cardtitle, cardptitle)
                 classdiv.append(imgdiv, carddiv, pricepdiv, innerCardRow)
                 coldiv.append(classdiv)
                 articleContent.append(coldiv)
@@ -93,3 +119,7 @@ const searchMovie = () => {
         articleContent.innerText = ""
     }
 searchMovie()
+
+
+
+
