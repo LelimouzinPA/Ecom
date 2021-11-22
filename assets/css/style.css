@@ -100,4 +100,10 @@
     margin-top: 50px;
     padding-top: 50px;
     border-top: 2px solid #F59732;
+    color: #007ca8
+}
+
+.imageSize {
+    width: 200px;
+    height: 250px;
 }
