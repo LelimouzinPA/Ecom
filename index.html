@@ -16,10 +16,9 @@
     <header>
         <nav class="myNav">
             <div class="row">
-                div
                 <!--Menu burger mobile-->
-                <div class="col dropdown d-block d-md-none d-lg-none d-xl-none d-xxl-none">
-                    <i class="fas fa-bars iBars" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                <div class="col dropdown d-block d-md-block d-lg-block d-xl-none d-xxl-none">
+                    <i class="fas fa-bars iBars m-2" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></i>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                         <li><a class="dropdown-item" href="#">Nourritures</a></li>
                         <li><a class="dropdown-item" href="#">Produits d'hygiène</a></li>
@@ -28,38 +27,40 @@
                     </ul>
                 </div>
                 <!--Menu format WEB-->
-                <div class="col-2 text-center d-none d-md-block d-lg-block d-xl-block d-xxl-block">
-                    <h3 class="myTitle">Cat'Shop</h3>
+                <div class="col-2 text-center d-none d-md-none d-lg-none d-xl-block d-xxl-block">
+                    <img src="/assets/img/logoCat.png" alt="Logo, cat'shop" height="40px" class="m-3">
                 </div>
-                <div class="col-2 text-center d-none d-md-block d-lg-block d-xl-block d-xxl-block">
+                <div class="col-2 text-center d-none d-md-none d-lg-none d-xl-block d-xxl-block">
                     <button id="foodBtn" class="navButton">Nourriture</button>
                 </div>
-                <div class=" col-2 text-center d-none d-md-block d-lg-block d-xl-block d-xxl-block">
+                <div class=" col-2 text-center d-none d-md-none d-lg-none d-xl-block d-xxl-block">
                     <button id="hygienBtn" class="navButton">Produits d'hygiène</button>
                 </div>
-                <div class="col-2 text-center d-none d-md-block d-lg-block d-xl-block d-xxl-block">
+                <div class="col-2 text-center d-none d-md-none d-lg-none d-xl-block d-xxl-block">
                     <button id="catgameBtn" class="navButton">Jouets</button>
                 </div>
-                <div class="col-2 text-center d-none d-md-block d-lg-block d-xl-block d-xxl-block">
+                <div class="col-2 text-center d-none d-md-none d-lg-none d-xl-block d-xxl-block">
                     <button id="MaterielCat" class="navButton">Matériel</button>
                 </div>
                 <!--Icon panier qui ne bouge pas-->
                 <!-- Button trigger modal -->
                 <div class="col">
-                    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal">
-<i class="fas fa-shopping-cart iCart float-end"></i></button>
+                    <button type="button" class="btn float-end" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <i class="fas fa-shopping-cart iCart"></i></button>
                 </div>
             </div>
         </nav>
-        <!--Logo-->
     </header>
     <div class="container">
         <section>
+            
             <!--Introduction avec photo -->
-            <div class="row catImg d-none d-md-block d-lg-block d-xl-block d-xxl-block">
-                <h1>Bienvenue chez Cat'Shop</h1>
+            <div class="row shadow catImg d-none d-md-none d-lg-none d-xl-block d-xxl-block">
+                <h1 class="myTitle">Bienvenue chez Cat'Shop</h1>
+                <p class="col-6 pText">Portés par la conviction qu'une vie de chat vaut le coup d'être vécue si on l'entoure de confort et de jeux, nous vous proposons sur cette boutique tout ce qu'il faut pour parfaire cette mission. Vous n'avez qu'à choisir ce dont votre félin à besoin parmi toutes nos collections, et nous les livrons à votre porte sans encombre.</p>
+                <p class="col-6 pText">Nous collaborons avec différents fournisseurs proposant des produits pour la plupart fais mains, nous prenons donc ce qu'il y a de mieux en terme de qualité mais aussi certifiée non toxique pour l'animal. Les critères très exigeants de nos propres félins font que chaque produit que vous pourrez retrouver sur notre boutique sont fiables et durables.</p>
             </div>
-            <h2 class="text-center d-block d-md-none d-lg-none d-xl-none d-xxl-none">Bienvenue chez Cat'Shop</h2>
+            <h2 class="text-center myTitle d-block d-md-block d-lg-block d-xl-none d-xxl-none">Bienvenue chez Cat'Shop</h2>
         </section>
         <section>
             <!--Row titre + séparation-->
@@ -81,6 +82,12 @@
         </section>
         <section>
             <div class="container p-5">
+                <!--logo-->
+                <div class="row myBorder">
+                    <div class="col text-center mb-5">
+                        <img src="/assets/img/logocatlogo.png" alt="Logo Cat'Shop" height="200px">
+                    </div>
+                </div>
                 <div class="row">
                     <div class="shadow align-self-center d-flex text-center col -12 col-sm-6">
                         <p>Un service clients à votre écoute :<br> Vous hésitez dans le choix du produit le plus adapté à vos besoins ? Vous avez une question sur votre commande ?<br> Notre service clients est à votre disposition pour vous guider dans vos
