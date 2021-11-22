@@ -101,7 +101,7 @@ const searchMovie = () => {
                             productModalDiv1.appendChild(productImage)
                                 // creation de la seconde div col 3
                             let productModalDiv2 = document.createElement("div")
-                            productModalDiv2.callName = "col-3"
+                            productModalDiv2.className = "col-4"
                             rowCart.appendChild(productModalDiv2)
                                 // creation du paragraphe titre
                             let pProductTitle = document.createElement("p")
@@ -109,6 +109,51 @@ const searchMovie = () => {
                             productModalDiv2.appendChild(pProductTitle)
                                 //let clonedProduct = coldiv.cloneNode(true)
                                 //rowCart.append(clonedProduct)
+                            let innerDivModal = document.createElement("div")
+                            innerDivModal.className = "col-2"
+                            let innerCardRowModal = document.createElement("div")
+                            innerCardRowModal.className = "  mt-3 justify-content-center pb-3"
+                                //Création du bouton moins
+                            const minusButtonModal = document.createElement("a")
+                            minusButtonModal.className = "col-1 btn btn-danger"
+                            minusButtonModal.innerText = "-"
+                            minusButtonModal.id = "minusModal" + article.id
+                            innerDivModal.appendChild(minusButtonModal)
+                                //Fonction diminution quantité au clic
+                            minusButtonModal.addEventListener("click", removeProductModal = () => {
+                                    if (productsInputModal.value > 0) {
+                                        productsInputModal.value--
+                                    } else {
+                                        productsInputModal.value == 0
+                                    }
+                                })
+                                //Création de l'input du nombre de produits
+                            var productsInputModal = document.createElement("input")
+                            productsInputModal.setAttribute("type", "text")
+                            productsInputModal.className = "col-2"
+                            productsInputModal.value = 0
+                            productsInputModal.id = "inputModal" + article.id
+                            innerDivModal.appendChild(productsInputModal)
+                                //Création du bouton plus
+                            const plusButtonModal = document.createElement("a")
+                            plusButtonModal.className = "col-1 btn btn-success"
+                            plusButtonModal.innerText = "+"
+                            plusButtonModal.id = "plusModal" + article.id
+                            innerDivModal.appendChild(plusButtonModal)
+                                //Fonction ajout quantité au clic
+                            plusButtonModal.addEventListener("click", addProductModal = () => {
+                                productsInputModal.value++
+                            })
+                            rowCart.appendChild(innerDivModal)
+                            let valDivModal = document.createElement("div")
+                            valDivModal.className = "col-2"
+                                //Création du bouton valider
+                            const confirmButtonModal = document.createElement("a")
+                            confirmButtonModal.className = "btn btn-primary mt-3"
+                            confirmButtonModal.innerText = "Valider"
+                            confirmButtonModal.id = "confirm" + article.id
+                            valDivModal.appendChild(confirmButtonModal)
+                            rowCart.append(valDivModal)
                         })
                         //Accrochage des divs
                     carddiv.append(cardtitle, cardptitle)
@@ -123,8 +168,9 @@ const clearMovie = () => {
     articleContent.innerText = ""
 }
 searchMovie()
-
-//fonction valeur de l'input pour afficher 
-//div quantité 
-//div prix
-//boutton + input - supprimer
+    //fonction valeur de l'input pour afficher 
+    //div quantité 
+    //div prix
+    //boutton + input - supprimer
+    //montant total addition tarif prix total + bouton acheter 
+    //bonus panier jolie
