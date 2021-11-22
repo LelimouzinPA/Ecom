@@ -68,7 +68,7 @@
             <!--Row titre + séparation-->
             <div class="row justify-content-center mt-5">
                 <div class="col-12 text-center">
-                    <h2 class="hline-bottom catTitle-color">Nourriture</h2>
+                    <h2 class="hline-bottom catTitle-color" id="categoryTitle"></h2>
                 </div>
             </div>
             <!--Fin du row titre-->
@@ -191,15 +191,13 @@
                     <h5 class="modal-title d-flex row" id="exampleModalLabel">Panier</h5>
                 </div>
                 <div class="modal-body">
-                    <div class="container">
-
-                        <div id="rowCart" class="row">
-                        </div>
+                    <div class="container" id="containerModal">
                     </div>
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer" id="footerModal">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Save changes</button>
+                    <p id="modalTotalPrice"></p>
                 </div>
             </div>
         </div>
