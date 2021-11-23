@@ -36,11 +36,11 @@ const searchCategory = () => {
                     classdiv.className = "card shadow"
                         //Création de la div contenant les images des cards
                     let imgdiv = document.createElement("img")
-                    imgdiv.className = " img-flex imageSize"
+                    imgdiv.className = " img-flex imageSize "
                     imgdiv.src = article.image
                         //Création de la div conteant le body des cards
                     let carddiv = document.createElement("div")
-                    carddiv.className = "card-body "
+                    carddiv.className = "card-body  "
                         //Création de la div conteant le titre des cards
                     let cardtitle = document.createElement("h3")
                     cardtitle.className = "card-title"
@@ -51,12 +51,13 @@ const searchCategory = () => {
                     cardptitle.innerText = (article.description != "") ? article.description.substring(0, 200) + " ..." : null
                         //Overlay masque au-dessus de la card
                     let pricepdiv = document.createElement("p")
-                    pricepdiv.innerText = article.price + " €"
-                    pricepdiv.className = "badge bg-success text-wrap col-6"
+                    pricepdiv.innerText = article.price.toFixed(2) + " €"
+                    pricepdiv.className = "badge bg-warning text-dark fs-5 m-5 text-center"
                         //Div row des boutons
                     let innerCardRow = document.createElement("div")
                     innerCardRow.className = "row mt-3 justify-content-center pb-3"
                         //Création du bouton moins
+                        //Div row des boutons
                     const minusButton = document.createElement("a")
                     minusButton.className = "col-2 btn btn-danger"
                     minusButton.innerText = "-"
@@ -89,58 +90,58 @@ const searchCategory = () => {
                         })
                         //Création du bouton valider
                     const confirmButton = document.createElement("a")
-                    confirmButton.className = "col-8 btn btn-primary mt-3"
+                    confirmButton.className = "col-8 btn btn-warning mt-3 mb-3 fs-5"
                     confirmButton.innerText = "Valider"
                     confirmButton.id = "confirm" + article.id
                     innerCardRow.appendChild(confirmButton)
                     let totalPriceNumber = 0
                     confirmButton.addEventListener("click", cartProduct = () => {
-                        //Création du rowCart
-                        let rowCart = document.createElement("div")
-                        rowCart.className = "row"
-                        containerModal.appendChild(rowCart)
-                            //Div première col
+                            //Création du rowCart
+                            let rowCart = document.createElement("div")
+                            rowCart.className = "row "
+                            containerModal.appendChild(rowCart)
+                                //Div première col
                             let productModalDiv1 = document.createElement("div")
-                            productModalDiv1.className = "col-3"
+                            productModalDiv1.className = "col-2"
                                 // accroche a row cart
                             rowCart.appendChild(productModalDiv1)
                                 // creation de img 
                             let productImage = document.createElement("img")
                             productImage.src = article.image
-                            productImage.className = "col-3 img-fluid"
+                            productImage.className = "col-12 col-sm-12 col-lg-6 img-fluid"
                             productModalDiv1.appendChild(productImage)
                                 // creation de la seconde div col 3
                             let productModalDiv2 = document.createElement("div")
-                            productModalDiv2.className = "col-2"
+                            productModalDiv2.className = "col-sm-2 "
                             rowCart.appendChild(productModalDiv2)
                                 // creation du paragraphe titre
                             let pProductTitle = document.createElement("p")
                             pProductTitle.innerText = article.product_name
                             productModalDiv2.appendChild(pProductTitle)
-                            //Création de la div tarif
+                                //Création de la div tarif
                             let cartPriceDiv = document.createElement("div")
-                            cartPriceDiv.className = "col-2"
+                            cartPriceDiv.className = "col-sm-2"
                             rowCart.appendChild(cartPriceDiv)
                                 //Création de l'input du nombre de produits
                             let innerDivModal = document.createElement("div")
-                            innerDivModal.className = "col-2"
+                            innerDivModal.className = "col-6 col-sm-6 col-lg-2"
                             let innerCardRowModal = document.createElement("div")
-                            innerCardRowModal.className = "justify-content-center"
+                            innerCardRowModal.className = "col-12 col-sm-3 col-lg-2 justify-content-center"
                                 //Création du bouton moins
                             const minusButtonModal = document.createElement("a")
-                            minusButtonModal.className = "col-4 btn btn-danger"
+                            minusButtonModal.className = "col-3 col-sm-1  col-lg-2 btn btn-danger"
                             minusButtonModal.innerText = "-"
                             minusButtonModal.id = "minusModal" + article.id
                             innerDivModal.appendChild(minusButtonModal)
                                 //Fonction diminution quantité au clic
                             minusButtonModal.addEventListener("click", removeProductModal = () => {
                                     if (productsInputModal.value > 0) {
-                                    productsInputModal.value--
-                                    articlePrice = article.price
-                                    result = articlePrice * productsInputModal.value
-                                    paraPrice.innerText = result.toFixed(2)
-                                    totalPriceNumber = totalPriceNumber - article.price
-                                    modalTotalPrice.innerText = "Montant total : " + totalPriceNumber.toFixed(2) + " €"
+                                        productsInputModal.value--
+                                            articlePrice = article.price
+                                        result = articlePrice * productsInputModal.value
+                                        paraPrice.innerText = result.toFixed(2)
+                                        totalPriceNumber = totalPriceNumber - article.price
+                                        modalTotalPrice.innerText = "Montant total : " + totalPriceNumber.toFixed(2) + " €"
                                     } else {
                                         productsInputModal.value == 0
                                     }
@@ -148,27 +149,27 @@ const searchCategory = () => {
                                 //Partie du code dans le modal
                             var productsInputModal = document.createElement("input")
                             productsInputModal.setAttribute("type", "text")
-                            productsInputModal.className = "col-4"
+                            productsInputModal.className = "col-3 col-sm-3 col-lg-2"
                             productsInputModal.value = productsInput.value
                             productsInputModal.id = "inputModal" + article.id
                             innerDivModal.appendChild(productsInputModal)
-                            //Création prix
+                                //Création prix
                             var paraPrice = document.createElement("p")
-                            //Calcul du prix
+                                //Calcul du prix
                             articlePrice = article.price
                             result = articlePrice * productsInput.value
                             paraPrice.innerText = result.toFixed(2) + " €"
                             cartPriceDiv.appendChild(paraPrice)
                                 //Création du bouton plus
                             const plusButtonModal = document.createElement("a")
-                            plusButtonModal.className = "col-4 btn btn-success"
+                            plusButtonModal.className = "col-3 col-sm-1 col-lg-2 btn btn-success"
                             plusButtonModal.innerText = "+"
                             plusButtonModal.id = "plusModal" + article.id
                             innerDivModal.appendChild(plusButtonModal)
                                 //Fonction ajout quantité au clic
                             plusButtonModal.addEventListener("click", addProductModal = () => {
                                 productsInputModal.value++
-                                articlePrice = article.price
+                                    articlePrice = article.price
                                 result = articlePrice * productsInputModal.value
                                 paraPrice.innerText = result.toFixed(2)
                                 totalPriceNumber = totalPriceNumber + article.price
@@ -176,10 +177,10 @@ const searchCategory = () => {
                             })
                             rowCart.appendChild(innerDivModal)
                             let valDivModal = document.createElement("div")
-                            valDivModal.className = "col-2"
+                            valDivModal.className = "col-12 col-sm-4 col-lg-2"
                                 //Création du bouton valider
                             const deleteButtonModal = document.createElement("a")
-                            deleteButtonModal.className = "btn btn-warning"
+                            deleteButtonModal.className = "btn btn-warning m-2"
                             deleteButtonModal.innerText = "Supprimer"
                             deleteButtonModal.id = "deleteModal" + article.id
                             deleteButtonModal.addEventListener("click", deleteRowCart = () => {
@@ -189,7 +190,7 @@ const searchCategory = () => {
                             })
                             valDivModal.appendChild(deleteButtonModal)
                             rowCart.append(valDivModal)
-                            //Création du paragraphe affichant le résultat total
+                                //Création du paragraphe affichant le résultat total
                             totalPriceNumber = totalPriceNumber + result
                             modalTotalPrice.innerText = "Montant total : " + totalPriceNumber.toFixed(2) + " €"
                         })
