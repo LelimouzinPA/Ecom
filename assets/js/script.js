@@ -4,23 +4,39 @@ categoryTitle.innerText = "Nourriture"
 foodBtn.addEventListener("click", function() {
     uri = "categorie1.json"
     searchCategory()
+    onLoad()
     categoryTitle.innerText = "Nourriture"
 })
 hygienBtn.addEventListener("click", function() {
     uri = "categorie2.json"
     searchCategory()
+    onLoad()
     categoryTitle.innerText = "Produits d'hygiéne"
 })
 catgameBtn.addEventListener("click", function() {
     uri = "categorie3.json"
     searchCategory()
+    onLoad()
     categoryTitle.innerText = "Jouets"
 })
 MaterielCat.addEventListener("click", function() {
         uri = "categorie4.json"
         searchCategory()
+        onLoad()
         categoryTitle.innerText = "Matériel"
     })
+    //Création du localStorage
+    const getPriceList = () => {
+        //On récupère la liste des prézis dans le localStorage. Si il n'y a pas de prézis, on en crée un tableau vide
+        localStorage.getItem("priceList") ? priceList = JSON.parse(localStorage.getItem("priceList")) : priceList = []
+        return priceList;
+    }
+    //Récupération des données du localStorage
+    const onLoad = () => {
+        priceList = getPriceList()
+        localStorage.getItem("priceList") ? priceList = JSON.parse(localStorage.getItem("priceList")) : priceList = []
+        return priceList;
+    }
     //Fonction Json
 const searchCategory = () => {
         fetch("http://127.0.0.1:5500/assets/json/" + uri)
@@ -94,7 +110,21 @@ const searchCategory = () => {
                     confirmButton.id = "confirm" + article.id
                     innerCardRow.appendChild(confirmButton)
                     let totalPriceNumber = 0
+                     /**
+                        * fonction qui récupère la liste des prix depuis le localStorage
+                        * @returns {Array}
+                        */
+                        //Création du localStorage pour les tarifs total
+                        let price = []
                     confirmButton.addEventListener("click", cartProduct = () => {
+                            //On récupère le titre et l'url de la nouvelle prézis
+                            const listedPrice = article.price * productsInput.value
+                            //On crée un nouvel objet prézis
+                            price = [listedPrice]
+                        //On ajoute la prézis à la liste des prézis
+                        priceList.push(price)
+                        //On met à jour la liste des prézis dans le localStorage
+                        localStorage.setItem("priceList", JSON.stringify(priceList))
                         //Création du rowCart
                         let rowCart = document.createElement("div")
                         rowCart.className = "row"
@@ -155,9 +185,10 @@ const searchCategory = () => {
                             //Création prix
                             var paraPrice = document.createElement("p")
                             //Calcul du prix
-                            articlePrice = article.price
-                            result = articlePrice * productsInput.value
-                            paraPrice.innerText = result.toFixed(2) + " €"
+                           // articlePrice = article.price
+                            //result = articlePrice * productsInput.value
+                            rowPrice = article.price * productsInput.value
+                            paraPrice.innerText = rowPrice.toFixed(2)
                             cartPriceDiv.appendChild(paraPrice)
                                 //Création du bouton plus
                             const plusButtonModal = document.createElement("a")
@@ -168,11 +199,11 @@ const searchCategory = () => {
                                 //Fonction ajout quantité au clic
                             plusButtonModal.addEventListener("click", addProductModal = () => {
                                 productsInputModal.value++
-                                articlePrice = article.price
-                                result = articlePrice * productsInputModal.value
-                                paraPrice.innerText = result.toFixed(2)
-                                totalPriceNumber = totalPriceNumber + article.price
-                                modalTotalPrice.innerText = "Montant total : " + totalPriceNumber.toFixed(2) + " €"
+                                //articlePrice = article.price
+                                //result = articlePrice * productsInputModal.value
+                                //paraPrice.innerText = result.toFixed(2)
+                                //totalPriceNumber = totalPriceNumber + article.price
+                                //modalTotalPrice.innerText = "Montant total : " + totalPriceNumber.toFixed(2) + " €"
                             })
                             rowCart.appendChild(innerDivModal)
                             let valDivModal = document.createElement("div")
@@ -183,15 +214,18 @@ const searchCategory = () => {
                             deleteButtonModal.innerText = "Supprimer"
                             deleteButtonModal.id = "deleteModal" + article.id
                             deleteButtonModal.addEventListener("click", deleteRowCart = () => {
-                                totalPriceNumber = totalPriceNumber - result
-                                modalTotalPrice.innerText = "Montant total : " + totalPriceNumber.toFixed(2) + " €"
+                                //totalPriceNumber = totalPriceNumber - result
+                                //modalTotalPrice.innerText = "Montant total : " + totalPriceNumber.toFixed(2) + " €"
                                 rowCart.remove()
                             })
                             valDivModal.appendChild(deleteButtonModal)
                             rowCart.append(valDivModal)
-                            //Création du paragraphe affichant le résultat total
-                            totalPriceNumber = totalPriceNumber + result
-                            modalTotalPrice.innerText = "Montant total : " + totalPriceNumber.toFixed(2) + " €"
+                            let sum = 0
+                            for (let i = 0; i < price.length; i++) {
+                                sum += price[i];
+                            }
+                            totalPriceNumber = totalPriceNumber + sum
+                            modalTotalPrice.innerText = "Montant total : " + parseFloat(totalPriceNumber).toFixed(2) + " €"
                         })
                         //Accrochage des divs
                     carddiv.append(cardtitle, cardptitle)
