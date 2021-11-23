@@ -178,7 +178,7 @@ const searchCategory = () => {
                             rowCart.appendChild(innerDivModal)
                             let valDivModal = document.createElement("div")
                             valDivModal.className = "col-12 col-sm-4 col-lg-2"
-                                //Création du bouton valider
+                                //Création du bouton supprimer
                             const deleteButtonModal = document.createElement("a")
                             deleteButtonModal.className = "btn btn-warning m-2"
                             deleteButtonModal.innerText = "Supprimer"
