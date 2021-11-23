@@ -1,5 +1,5 @@
 {
-    "results": [{
+    "categorie1": [{
             "id": 1,
             "product_name": "Croquettes",
             "description": "Aliment complet pour la nutrition quotidienne du chat adulte. Toutes les recettes sont préparées avec 26% de viande ou de poisson frais et HFC, offrant jusqu’à 46% de viande ou de poisson au total.Grâce à ses protéines animales de haute qualité et un savant mélange de céréales, Holistic offre au chat un repas satisfaisant tous ses besoins nutritionnels quotidiens.Formulées sans OGM et naturellement préservées sans colorants artificiels ni conservateurs chimiques. Holistic promet un repas equilibré et complet. En outre, avec une qualité dont la transparence est vérifiable dès la lecture de l’étiquette.            Le sigle HFC signifie que la viande ou le poisson utilisés dans les recettes étaient à l’origine propres à la consommation humaine.",
@@ -70,5 +70,177 @@
             "price": 5.25
         }
 
-    ]
+    ],
+    "categorie2": [{
+        "id": 11,
+        "product_name": "Litière",
+        "description": "La litière CatLitter Almo Nature est une litière pour chat biodégradable, compostable, et peut même être jetée dans les toilettes. Elle est constituée de fibres végétales et permet une agglomération rapide, La litière végétale CATLITTER ne contient pas de poussières, de silice ou d’argile. Elle assure un excellent contrôle des odeurs, et grâce au pouvoir concentré des fibres végétales, elle permet une agglomération ultra-rapide, laissant la litière environnante et le bac parfaitement propres.",
+        "image": "https://static.cynoland.com/wp-content/uploads/2021/07/la_3566c524f9d5d7027454a783c841250ba711521558892.jpg",
+        "price": 14.90
+    },
+    {
+        "id": 12,
+        "product_name": "Litière",
+        "description": "La litière Perlinette en silice se présente sous forme de fines granules. Chaque cristal de silice à un taux d’absorption de 150%. Cette litière permet ainsi une absorption maximale et est laissée sèche et sans odeurs. Elle est ainsi réutilisable longtemps.",
+        "image": "https://static.cynoland.com/wp-content/uploads/2020/08/41Mxu1EpWeL.jpg",
+        "price": 18.30
+    },
+    {
+        "id": 13,
+        "product_name": "Litière",
+        "description": "Fabriquer à 100% avec de l’argile naturelle pure, la litière OdouLock possède un excellent taux d’absorption de 580% de son poids. 99,9% sans poussière, ce qui est mieux pour vous et pour les systèmes respiratoires de votre chat.Garantie sans odeur pendant 40 jours.",
+        "image": "https://static.cynoland.com/wp-content/uploads/2020/10/litiere-odour-lock-poudre-bebe.jpg",
+        "price": 14.25
+    },
+    {
+        "id": 14,
+        "product_name": "Litière",
+        "description": "Litière pour chat naturelle et écologique. Perlinette bois de sapin est extrêmement absorbante. En effet, elle absorbe jusqu’à 200% de son poids en eau.En Outre, elle neutralise les odeurs naturellement.Compacte, agglomérant cette litière est certifiée PEFC. Elle est aussi compostable et donc écoresponsable.",
+        "image": "https://static.cynoland.com/wp-content/uploads/2020/08/perlinettelitie_reboisdesapin10l_1.jpg",
+        "price": 15.00
+    },
+    {
+        "id": 15,
+        "product_name": "Bac à litière",
+        "description": "Grande maison de toilette pour chat, coque amovible avec poignée, filtre à charbon actif, fermetures par clips, porte battante, picots en caoutchouc antidérapants. Dimensions : L 71 x l 56 x H 47 cm.",
+        "image": "https://shop-cdn-m.mediazs.com/bilder/maison/de/toilette/trixie/primo/xxl/pour/chat/4/400/114828_pla_trixie_katzentoilette_primoxxl_haube_gblauweiss_hs_01_4.jpg",
+        "price": 30.99
+    },
+    {
+        "id": 16,
+        "product_name": "Bac à litière",
+        "description": "Bac à litière pour chat avec système hygiénique de séparation, avec 2 bacs et 1 tamis pour un nettoyage facile et un usage économique, fermetures par clips. Dimensions : L 59 x l 39 x H 22 cm.",
+        "image": "https://static.cynoland.com/wp-content/uploads/2020/08/leonardo-boite-super-premium-riche-en-poisson-de-mer.jpg",
+        "price": 18.29
+    },
+    {
+        "id": 17,
+        "product_name": "Désodorisant pour litière",
+        "description": "Désodorisant pour litière Tigerino, prolonge la durée d'utilisation et la fraîcheur de la litière. Découvrez les 3 senteurs à prix avantageux grâce à ce lot mixte : parfum printanier, talc pour bébé et fleur de coton.",
+        "image": "https://shop-cdn-m.mediazs.com/bilder/offre/dcouverte/tigerino/dsodorisant/pour/litire/8/400/tigerino_desodorisant_offre_essai_8.jpg",
+        "price": 12.99
+    },
+    {
+        "id": 18,
+        "product_name": "Désodorisant pour litière",
+        "description": "Désodorisant antibactérien, détruit 99,99 % des germes, apporte une odeur fraîche. Enlève les taches de vomi, d'urine et d'excréments, désinfecte la maison de toilette, les accessoires et les textiles.",
+        "image": "https://shop-cdn-m.mediazs.com/bilder/dsodorisant/savic/refreshr/cleaning/2/400/33641_savic_refresh_r_spray_top_seller_2.jpg",
+        "price": 16.49
+    }
+
+],
+"categorie3": [{
+    "id": 20,
+    "product_name": "Jouet à macher au Watabi",
+    "description": "Ce jouet permet aux chats de se nettoyer les dents et les gencives. Le matatabi et la Cataire sont des plantes euphorisantes qui attirent les chats.",
+    "image": "https://www.catapart.fr/9755-large_default/jouet-pour-chat-matatabi-et-cataire-wouapy.jpg",
+    "price": 6.90
+},
+{
+    "id": 21,
+    "product_name": "Multi jouets pour chat : pack de 9 pièces",
+    "description": "Mettez au défi l'ennui de votre chat avec ce pack très complet de 9 jouets multicolores qui l'entraineront jusqu'au bout de la fatigue!",
+    "image": "https://images.truffaut.com/media/catalog/productcdn:///Articles/jpg/0475000/475286_004.jpg?width=700&height=700&store=fr&image-type=image",
+    "price": 8.99
+},
+{
+    "id": 22,
+    "product_name": "Jouet pour chat snack souris",
+    "description": "Fabriqué par la marque allemande Trixie, le Jouet pour chat Snack souris est élaboré en plastique transparent pour une bonne visibilité du réservoir des friandises ainsi qu'en silicone résistant afin de garantir une durée d'utilisation optimale.",
+    "image": "https://www.auberdog.com/public/img/conteneurs/chats-trixie-jouet-pour-chat-snack-souris-40845119721-500x500.jpeg?token=4abf5970d64a4f41ab406d90d73afa7d",
+    "price": 4.49
+},
+{
+    "id": 23,
+    "product_name": "Jouet interactif pour chat en bois",
+    "description": "Super simple à utiliser, votre chat pourra jouer facilement avec pendant des heures en tapant sur les baguettes en bois et faire sortir les figurines. Facile et ludique ! Idéal pour stimuler l'instinct de chasseur qui sommeille dans votre fauve.",
+    "image": "https://cdn.shopify.com/s/files/1/0484/9559/1580/products/HTB1JoUvXmf2gK0jSZFPq6xsopXaL_960x.jpg?v=1615932050",
+    "price": 32.99
+},
+{
+    "id": 24,
+    "product_name": "Coffret pour chat heureux",
+    "description": "Vous connaissez un heureux propriétaire de chat ou vous en êtes un ? Ce coffret \"deux en un\" est fait pour vous ! Il permet de gâter son animal de compagnie avec deux jouets (canne à pêche et souris mécanique) et propose à son propriétaire un guide synthétique pour rendre son chat (encore plus) heureux !Bons gestes au quotidien, alimentation, éducation positive et jeux bien-être.Par Isabelle Pasquet, vétérinaire et consultante TV/web/radio sur les animaux domestiques.",
+    "image": "https://static.fnac-static.com/multimedia/Images/FR/NR/4c/58/9d/10311756/1540-1/tsp20190828081120/Coffret-pour-rendre-son-chat-heureux-Livre-joujoux-chat.jpg",
+    "price": 15.90
+},
+{
+    "id": 25,
+    "product_name": "Jouet tube avec balle",
+    "description": "Voie à trois couches, nettoyage détachable, taille 25 cm de diamètre, hauteur 13 cm, jouets que les chats aiment.",
+    "image": "https://www.cdiscount.com/pdt2/9/9/7/1/700x700/auc0778601907997/rw/balle-de-controle-de-tour-de-jouet-de-chat-3-couch.jpg",
+    "price": 32.48
+},
+{
+    "id": 26,
+    "product_name": "Big Kitty Fish - Poisson XXL herbe à chat",
+    "description": "Irrésistible – L’herbe à chat de ce jouet éveillera les sens de votre minou.",
+    "image": "https://www.miaouland.fr/wp-content/uploads/2018/09/Style-Cataire-Jouets-pour-Chat-Simulation-2-1.png",
+    "price": 13.90
+},
+{
+    "id": 27,
+    "product_name": "Jouet friandises pour chat",
+    "description": "Rendez vous votre animal ! Ce jouet permettra de réveiller ses instincts en essayant de récupérer des croquettes. Pratique !",
+    "image": "https://ae01.alicdn.com/kf/HTB1rmNcwMmTBuNjy1Xbq6yMrVXat/Jouet-de-friandises-pour-chat-boule-de-chaton-Interactive-distributeur-de-nourriture-pour-animaux-de-compagnie.jpg_q50.jpg",
+    "price": 14.99
+}
+],
+"categorie4": [{
+    "id": 28,
+    "product_name": "Arbre à chat XXL Oskar",
+    "description": "L'arbre à chat XXL Oskar, de la marque Allemande de grande qualité Trixie, est particulièrement élaboré pour répondre aux besoins des chats âgés pouvant souffrir de problème de mobilité (arthrose, arthrite....) et pour les chats handicapés.",
+    "image": "https://www.auberdog.com/public/img/conteneurs/chats-trixie-arbre-a-chat-xxl-oskar-pour-chat-age-82187446394-500x500.jpeg?token=082ebeb7ddd03da2109a02931b8190fc",
+    "price": 339.99
+},
+{
+    "id": 29,
+    "product_name": "Arbre à chat MARCEL",
+    "description": "Arbre à chat 141 cm MARCEL, Griffoir, Grattoir, Sisal, Tronc + Corde de jeu + Hamac 105 cm x 60 cm x 141 cm TECTAKE. ",
+    "image": "https://cdn.manomano.com/images/images_products/2572316/P/7560291_1.jpg",
+    "price": 69.99
+},
+{
+    "id": 30,
+    "product_name": "Griffoir pour chat en jonc de mer",
+    "description": "Avec ce griffoir pour chat en jonc de mer + jouet Brigitte votre chat est assuré de longues heures de jeux. Ce griffoir présente plusieurs particularités. En effet, il n'est pas en sisal mais en jonc de mer, plus résistant encore.",
+    "image": "https://napoleon-storage.s3.eu-west-3.amazonaws.com/product-images/main/griffoir-pour-chat-en-jonc-de-mer-jouet-brigitte-5c2f110ab9a09.jpg",
+    "price": 21.90
+},
+{
+    "id": 31,
+    "product_name": "Griffoir design LE TRONC XXL",
+    "description": "Le griffoir pour chat XL en forme de tronc est un griffoir en carton ultra robuste qui va permettre à votre chat d'aiguiser ses griffes.",
+    "image": "https://dog-and-cat-design.com/wp-content/uploads/2020/05/letronc-noir1.jpg",
+    "price": 159
+},
+{
+    "id": 32,
+    "product_name": "Harnais avec laisse KITTY CAT",
+    "description": "Harnais et laisse pour chatons.tour de cou de 15 a 22 cm.tour de ventre de 20 a 32 cm.avec laisse de 1.20m.KITTY CAT vert pour les chatons, Réglable.",
+    "image": "https://static.fnac-static.com/multimedia/Images/A1/A1/28/FE/16656545-1505-1540-1/tsp20210416180839/Harnais-avec-laie-1-20m-KITTY-CAT-vert-pour-chatons.jpg",
+    "price": 13.99
+},
+{
+    "id": 33,
+    "product_name": "Panier pour chat SPHERE",
+    "description": "Panier pour chat en polyester, coloris crème et gris avec coussin amovible et réversible.",
+    "image": "https://www.cocktail-scandinave.fr/Vbeta2018/wp-content/uploads/2019/11/BO672-016.jpg",
+    "price": 12.90
+},
+{
+    "id": 34,
+    "product_name": "Panier résine tréssée",
+    "description": "Fabriqué en résine tressée imitation rotin et fourni avec un grand coussin en coton d'une grande douceur, ce panier pour chat deviendra rapidement son meilleur ami.",
+    "image": "https://media.adeo.com/marketplace/MKP/82728608/c911aee93a03e3f9c600b245492809f2.jpeg?width=650&height=650&format=jpg&quality=80&fit=bounds",
+    "price": 74.90
+},
+{
+    "id": 35,
+    "product_name": "Bol en céramique pour chat",
+    "description": "Boel en céramique de taille 16cm, Le bol est légèrement surélevé grâce à son socle en bambou ce qui empêche votre animal de manger dans une mauvaise posture atténuant ainsi ses douleurs articulaires et les pressions sur ses vertèbres cervicales tout en évitant les régurgitations.",
+    "image": "https://cdn.shopify.com/s/files/1/0330/6199/4628/products/H4a61690ed9fa435ba07fd7993718f8a8L_960x.jpg?v=1633553416",
+    "price": 39.90
+}
+]
 }
